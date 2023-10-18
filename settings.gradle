@@ -1,0 +1,3 @@
+rootProject.name = 'yootk-spring'
+include 'base'
+

@@ -1,0 +1,6 @@
+ext.versions = [                // 定义全部的依赖库版本号
+              spring           : '6.0.12'      // Spring版本号
+]
+ext.libraries = [            // 依赖库引入配置
+             'spring-context'        : "org.springframework:spring-context:${versions.spring}"
+]
