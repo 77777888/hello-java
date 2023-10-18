@@ -18,7 +18,17 @@ subprojects { 						// 配置子项目
         mavenCentral()					// Maven远程仓库
     }
     dependencies {					// 公共依赖库管理
+        //以下的配置为Juit测试相关依赖库
+        testImplementation(enforcedPlatform(libraries.'junit-bom'))
+        testImplementation(libraries.'junit-jupiter-api')
+        testImplementation(libraries.'junit-vintage-engine')
+        testImplementation(libraries.'junit-jupiter-engine')
+        testImplementation(libraries.'junit-platform-launcher')
+        testImplementation(libraries.'spring-test')
 
+        //以下的配置为日志组件的依赖库
+        implementation(libraries.'slf4j-api')
+        implementation(libraries.'logback-classic')
     }
     sourceSets {						// 源代码目录配置
         main {						// main及相关子目录配置
@@ -65,6 +75,11 @@ subprojects { 						// 配置子项目
     [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'// 编码配置
 }
 project(":base"){
-    dependencies {}
+    dependencies {
+        implementation(libraries."spring-context")
+        implementation(libraries."spring-core")
+        implementation(libraries."spring-context-support")
+        implementation(libraries."spring-beans")
+    }
 }
 
