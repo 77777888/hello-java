@@ -5,6 +5,7 @@ import com.yootk.service.impl.MessageServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+
 public class StartYootkSpringApplication {
     public static void main(String[] args) {
         ApplicationContext context=new ClassPathXmlApplicationContext("spring/spring-base.xml");//加载配置文件

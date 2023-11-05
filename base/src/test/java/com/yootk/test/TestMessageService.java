@@ -18,6 +18,7 @@ public class TestMessageService {
     @Test
     public void testEcho() throws Exception{
         LOGGER.info("echo() 调试测试: {}",this.messageService.echo("沐言科技：www.yootk.com"));
+        LOGGER.warn("echo() 调试测试: {}",this.messageService.echo("沐言科技：www.yootk.com"));
         LOGGER.error("echo() 调试测试: {}",this.messageService.echo("沐言科技：www.yootk.com"));
         LOGGER.debug("echo() 调试测试: {}",this.messageService.echo("沐言科技：www.yootk.com"));
 
